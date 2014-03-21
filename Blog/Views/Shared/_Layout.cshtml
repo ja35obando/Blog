@@ -3,47 +3,134 @@
     <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta charset="utf-8" />
-        <title>@ViewBag.Title - Mi aplicación ASP.NET MVC</title>
-        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <title>José Andrés - Blog</title>
+        <link href="~/Images/JA.png" rel="shortcut icon" type="image/x-icon" />
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+        <link href="/Content/global.css" rel="stylesheet" media="screen"/>
+        @if (Page.id == "HomeIndex")
+        {
+            <link href="/Content/HomeIndex.css" rel="stylesheet" media="screen"/>    
+        }
+         @if (Page.id == "HomeAbout")
+        {
+            <link href="/Content/HomeAbout.css" rel="stylesheet" media="screen"/>    
+        }
         <meta name="viewport" content="width=device-width" />
-        @Styles.Render("~/Content/css")
-        @Scripts.Render("~/bundles/modernizr")
     </head>
     <body>
         <header>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("su logotipo aquí", "Index", "Home")</p>
-                </div>
-                <div class="float-right">
-                    <section id="login">
-                        @Html.Partial("_LoginPartial")
-                    </section>
-                    <nav>
-                        <ul id="menu">
-                            <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                            <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
-                            <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
-                        </ul>
-                    </nav>
-                </div>
+            <br />
+            <div id="div" class="modal-header">
+                <a data-toggle="modal" data-target="#Login">
+                    <img id="JA" src="/Images/JA.svg.png" align="left"/>
+                </a>
+                <h1 class="site-title" style="text-align:center;">Bienvenido a mi Blog</h1>
+                <br />
+                <ul class="nav nav-pills nav-justified">
+                    <li data-slide-to="0">@Html.ActionLink("Inicio", "Index", "Home")</li>
+                    <li data-slide-to="1">@Html.ActionLink("Acerca de", "About", "Home")</li>
+                    <li data-slide-to="2">@Html.ActionLink("Contacto", "Contact", "Home")</li>
+                </ul>   
+                <br />
             </div>
         </header>
         <div id="body">
             @RenderSection("featured", required: false)
             <section class="content-wrapper main-content clear-fix">
+                <br />
                 @RenderBody()
+                <br />
             </section>
         </div>
         <footer>
             <div class="content-wrapper">
-                <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET MVC</p>
+                <div class="well well-sm quick-contact">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h1 class="title-contact">
+                                    Contacto</h1>
+                            </div>
+                            <div class="col-md-4 contact-email">
+                                <h3>
+                                    José Andrés Obando Díaz</h3>
+                                <h5>
+                                    ja35obando@gmail.com</h5>
+                                <h5>
+                                    +506 8383-0335 o +506 7084-9331</h5>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row contact row-first">
+                                    <div class="col-md-6">
+                                        <a href="http://www.facebook.com/ja35obando" class="facebook"><i class="fa fa-facebook"><br/></i> Facebook</a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a href="http://www.twitter.com/ja35obando" class="twitter"><i class="fa fa-twitter"><br/></i> Twitter</a>
+                                    </div>
+                                </div>
+                                <div class="row contact">
+                                    <div class="col-md-6">
+                                        <a href="https://plus.google.com/+JoséAndrésObandoDíaz35" class="google"><i class="fa fa-google-plus"><br/></i> Plus</a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a href="http://www.linkedin.com/pub/jos%C3%A9-andr%C3%A9s-obando-d%C3%ADaz/92/886/7b0" class="linkedin"><i class="fa fa-linkedin"><br/></i>LinkedIn</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            </div>
         </footer>
-
-        @Scripts.Render("~/bundles/jquery")
-        @RenderSection("scripts", required: false)
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <script src="//code.jquery.com/jquery.js"></script>
+            <!-- Include all compiled plugins (below), or include individual files as needed -->
+            <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+            <!-- jQuery (General) -->
+            <script src="/Scripts/General.js"></script>
+        @if (Page.id == "HomeIndex")
+        {
+            <script src="/Scripts/HomeIndex.js"></script>   
+        }
+        @if (Page.id == "HomeAbout")
+        {
+            <script src="/Scripts/HomeAbout.js"></script>   
+        }
+        <div class="modal fade" id="Login" tabindex="2" role="dialog" aria-labelledby="contactLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="panel-title" id="contactLabel"><span class="glyphicon glyphicon-user"></span>  Iniciar Sección.</h4>
+                    </div>
+                    <form role="form" action="/Views/login.cshtml" method="post">
+                        <fieldset>
+                            <br />
+                            <div class="col-xs-12 col-sm-8 col-md12 col-sm-offset-2 col-md-offset-2">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                    <input type="text" name="email" id="email" class="form-control input-lg" placeholder="Usuario">
+				                </div>
+                                <br />
+				                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
+                                    <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Contraseña">
+				                </div>
+                                <div class="row contact row-first">
+                                    <div class="col-md-6">
+                                        <input type="submit" class="btn btn-lg btn-success btn-block" value="Entrar">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="reset" class="btn btn-lg btn-danger btn-block" value="Limpiar"/>
+                                    </div>
+                                </div>
+                            </div>
+				        </fieldset>
+		            </form>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
