@@ -4,6 +4,7 @@
 
 html {
     width: 1366px;
+    
 }
 
 body{
@@ -66,14 +67,14 @@ h2 {
 {
     border-radius: 0px;
 }
-.nav-pills>li[data-slide-to="0"].active a { background-color: #088A08; }
-.nav-pills>li[data-slide-to="1"].active a { background-color: #088A08; }
-.nav-pills>li[data-slide-to="2"].active a { background-color: #088A08; }
-.nav-pills>li[data-slide-to="3"].active a { background-color: #088A08; }
-.nav-pills>li[data-slide-to="4"].active a { background-color: #088A08; }
-.nav-pills>li[data-slide-to="5"].active a { background-color: #088A08; }
-.nav-pills>li[data-slide-to="6"].active a { background-color: #088A08; }
-.nav-pills>li[data-slide-to="7"].active a { background-color: #088A08; }
+.nav-pills>li[data-slide-to="0"].active a { background-color: #21963B; }
+.nav-pills>li[data-slide-to="1"].active a { background-color: #21963B; }
+.nav-pills>li[data-slide-to="2"].active a { background-color: #21963B; }
+.nav-pills>li[data-slide-to="3"].active a { background-color: #21963B; }
+.nav-pills>li[data-slide-to="4"].active a { background-color: #21963B; }
+.nav-pills>li[data-slide-to="5"].active a { background-color: #21963B; }
+.nav-pills>li[data-slide-to="6"].active a { background-color: #21963B; }
+.nav-pills>li[data-slide-to="7"].active a { background-color: #21963B; }
 
 #JA {
     width: 25%;
