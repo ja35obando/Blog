@@ -64,6 +64,12 @@ h2 {
     border-bottom-color: transparent;
 }
 
+#title {
+    color: #21963B;
+    text-align:center;
+    padding-right:8%;
+}
+
 .nav-justified > li > a
 {
     border-radius: 0px;

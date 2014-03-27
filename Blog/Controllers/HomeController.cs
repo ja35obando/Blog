@@ -20,8 +20,10 @@ namespace Blog.Controllers
             return View();
         }
 
-        public ActionResult Comment()
+        public ActionResult Comment(string parametro)
         {
+            int var = int.Parse(parametro) + 1;
+            ViewBag.Message = var.ToString();
             return View();
         }
     }

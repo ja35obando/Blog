@@ -35,12 +35,16 @@
                 <a data-toggle="modal" data-target="#Login">
                     <img id="JA" src="/Images/JA.svg.png" align="left"/>
                 </a>
-                <h1 class="site-title" style="text-align:center;">Bienvenido a mi Blog</h1>
+                <h1 id="title" class="site-title">Bienvenido a mi Blog</h1>
                 <br />
                 <ul class="nav nav-pills nav-justified">
                     <li data-slide-to="0">@Html.ActionLink("Inicio", "Index", "Home")</li>
                     <li data-slide-to="1">@Html.ActionLink("Acerca de", "About", "Home")</li>
                     <li data-slide-to="2"><a data-toggle="modal" data-target="#contact">Contácteme</a></li>
+                    @if (Page.id == "HomeComment")
+                    {
+                      <li data-slide-to="3" class="active"><a>Comentarios</a></li>
+                    }
                 </ul>   
                 <br />
             </div>
