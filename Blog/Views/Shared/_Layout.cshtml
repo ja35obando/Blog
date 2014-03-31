@@ -5,7 +5,6 @@
         <meta charset="utf-8" />
         <title>José Andrés - Blog</title>
         <link href="~/Images/JA.png" rel="shortcut icon" type="image/x-icon" />
-        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
         <meta name="viewport" content="width=device-width" />
         @Styles.Render("//bootswatch.com/shamrock/bootstrap.min.css")
         @Styles.Render("~/Content/global.css")
@@ -15,6 +14,7 @@
         }
         @if (Page.id == "HomeAbout")
         {
+            @Styles.Render("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css")
             @Styles.Render("~/Content/HomeAbout.css")
         }
         @if (Page.id == "HomeContact")
@@ -23,7 +23,7 @@
         }
         @if (Page.id == "HomeComment")
         {
-            <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+            @Styles.Render("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css")
             @Styles.Render("~/Content/HomeComment.css")
         }
         @Scripts.Render("~/bundles/modernizr")
