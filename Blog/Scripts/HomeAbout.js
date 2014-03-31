@@ -1,10 +1,5 @@
 ﻿$(document).ready(function () {
     $('.nav-pills>li[data-slide-to="1"]').addClass('active');
-
-    $('#myCarousel').carousel({
-        interval: 104000
-    });
-
     var clickEvent = false;
     $('#myCarousel').on('click', '.nav a', function () {
         clickEvent = true;
