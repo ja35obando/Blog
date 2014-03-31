@@ -31,8 +31,8 @@
 
 .btn-blog {
     color: #ffffff;
-    background-color: #21963B;
-    border-color: #21963B;
+    background-color: #284815;
+    border-color: #284815;
     border-radius:0;
     margin-bottom:10px
 }
@@ -42,9 +42,9 @@
 .btn-blog.active,
 .open .dropdown-toggle.btn-blog {
     color: white;
-    background-color:#21963B;
-    border-color: #21963B;
+    background-color:#284815;
+    border-color: #284815;
 }
 h1 {text-align: center;}
- h2{color:#21963B;}
- .margin10{margin-bottom:10px; margin-right:10px;}
+h2{color:#21963B;}
+.margin10{margin-bottom:10px; margin-right:10px;}

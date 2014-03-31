@@ -22,3 +22,7 @@
     color: #000;
     background-color: #FFF;
 }
+#articulo {
+    text-align: justify;
+    text-justify: inter-word;
+}
