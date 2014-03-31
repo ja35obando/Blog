@@ -50,12 +50,7 @@
             </div>
         </header>
         <div id="body">
-            @RenderSection("featured", required: false)
-            <section class="content-wrapper main-content clear-fix">
-                <br />
-                @RenderBody()
-                <br />
-                <div id="fb-root"></div>
+            <div id="fb-root"></div>
                 <script>
                     window.fbAsyncInit = function () {
                         FB.init({
@@ -113,7 +108,7 @@
                             console.log('Good to see you, ' + response.name + '.');
                         });
                     }
-                    
+
                 </script>
 
                 <!--
@@ -123,6 +118,11 @@
                 <fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
             </section>
             <br />
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                <br />
+                @RenderBody()
+                <br />
         </div>
         <footer>
             <div class="content-wrapper">
@@ -226,7 +226,7 @@
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="panel-title" id="contactLabel"><span class="glyphicon glyphicon-edit"></span> Contácteme.</h4>
+                        <h4 class="panel-title"><span class="glyphicon glyphicon-edit"></span> Contácteme.</h4>
                     </div>
                     <form action="/Logic/Mailer.cshtml" method="post" accept-charset="utf-8">
                         <div class="modal-body" style="padding: 5px;">
@@ -269,10 +269,10 @@
                                 </div>
                             </div>
                         </div>  
-                        <div class="panel-footer" style="margin-bottom:-14px;">
+                        <div class="panel-footer">
                             <input type="submit" class="btn btn-success" value="Enviar"/>
                                 <!--<span class="glyphicon glyphicon-ok"></span>-->
-                            <input type="reset" class="btn btn-danger" value="Limpiar" />
+                            <input type="reset" class="btn btn-danger" value="Limpiar"/>
                                 <!--<span class="glyphicon glyphicon-remove"></span>-->
                         </div>
                     </form>

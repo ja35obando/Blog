@@ -96,6 +96,23 @@ h2 {
     border-left: 1px solid #F2F2F2;
 }
 
+.pic
+{
+     margin-top:50px; 
+     width:120px;
+     margin-left:50px;
+     margin-bottom:-60px;
+}
+
+.panel
+{
+    background-image:url("http://www.wallsave.com/wallpapers/1920x1200/monster-energy-drink/895693/monster-energy-drink-fondos-de-pantalla-gratis-barras-verdes-hd-895693.jpg"); 
+}
+
+#articulo2 {
+    text-align: justify;
+    text-justify: inter-word;
+}
 
 .container {width: 984px;}
 .fa{font-size:24px;margin-right:5px}

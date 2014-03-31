@@ -2,17 +2,23 @@
     Page.id = "HomeComment";
 }
 
-<div class="container">
-	<h1>Title @ViewBag.Message</h1>
+<div id="comments" class="container">
+	<br />
+    <div class="panel">
+        <br />
+        <h1>
+            Title @ViewBag.Message
+        </h1>
+        <br />
+    </div>
     <br />
-    <img src="http://www.kaczmarek-photo.com/wp-content/uploads/2012/06/guinnes-150x150.jpg" alt="post img" class="pull-left img-responsive thumb margin10 img-thumbnail">
-    <article><p>
+    <article id="articulo2">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
         ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only 
         five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
         of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
         Lorem Ipsum.    
-        </p></article> <br />
+        </article> <br />
     <br /> <br />
     <div class="timeline-footer">
         <a class="btn btn-blog pull-left marginBottom10"><i class="glyphicon glyphicon-thumbs-up"></i></a>
@@ -20,7 +26,7 @@
         <a class="btn btn-blog pull-right marginBottom10" title="11 hours ago via Twitter">Posteado: <em> 11 hours ago via Twitter </em></a> 
     </div>
 </div>
-<hr />
+<br />
 <div id="comments" class="container">
   <div class="row">
     <div class='col-md-offset-2 col-md-8 text-center'>
