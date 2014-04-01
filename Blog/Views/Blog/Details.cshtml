@@ -1,4 +1,4 @@
-﻿@model Blog.Models.ClassRoom
+﻿@model Blog.Models.Blog
 
 @{
     ViewBag.Title = "Details";
@@ -7,7 +7,7 @@
 <h2>Details</h2>
 
 <fieldset>
-    <legend>ClassRoom</legend>
+    <legend>Blog</legend>
 
     <div class="display-label">
          @Html.DisplayNameFor(model => model.Name)
@@ -17,10 +17,10 @@
     </div>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.Capacity)
+         @Html.DisplayNameFor(model => model.Detalle)
     </div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.Capacity)
+        @Html.DisplayFor(model => model.Detalle)
     </div>
 </fieldset>
 <p>

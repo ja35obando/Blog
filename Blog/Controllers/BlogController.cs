@@ -9,33 +9,33 @@ using Blog.Models;
 
 namespace Blog.Controllers
 {
-    public class ClassRoomController : Controller
+    public class BlogController : Controller
     {
-        private ClassRoomDbContext db = new ClassRoomDbContext();
+        private BlogDbContext db = new BlogDbContext();
 
         //
-        // GET: /Default1/
+        // GET: /Blog/
 
         public ActionResult Index()
         {
-            return View(db.ClassRooms.ToList());
+            return View(db.Blogs.ToList());
         }
 
         //
-        // GET: /Default1/Details/5
+        // GET: /Blog/Details/5
 
         public ActionResult Details(int id = 0)
         {
-            ClassRoom classroom = db.ClassRooms.Find(id);
-            if (classroom == null)
+            Blog blog = db.Blogs.Find(id);
+            if (blog == null)
             {
                 return HttpNotFound();
             }
-            return View(classroom);
+            return View(blog);
         }
 
         //
-        // GET: /Default1/Create
+        // GET: /Blog/Create
 
         public ActionResult Create()
         {
@@ -43,73 +43,73 @@ namespace Blog.Controllers
         }
 
         //
-        // POST: /Default1/Create
+        // POST: /Blog/Create
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(ClassRoom classroom)
+        public ActionResult Create(Blog blog)
         {
             if (ModelState.IsValid)
             {
-                db.ClassRooms.Add(classroom);
+                db.Blogs.Add(blog);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(classroom);
+            return View(blog);
         }
 
         //
-        // GET: /Default1/Edit/5
+        // GET: /Blog/Edit/5
 
         public ActionResult Edit(int id = 0)
         {
-            ClassRoom classroom = db.ClassRooms.Find(id);
-            if (classroom == null)
+            Blog blog = db.Blogs.Find(id);
+            if (blog == null)
             {
                 return HttpNotFound();
             }
-            return View(classroom);
+            return View(blog);
         }
 
         //
-        // POST: /Default1/Edit/5
+        // POST: /Blog/Edit/5
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(ClassRoom classroom)
+        public ActionResult Edit(Blog blog)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(classroom).State = EntityState.Modified;
+                db.Entry(blog).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(classroom);
+            return View(blog);
         }
 
         //
-        // GET: /Default1/Delete/5
+        // GET: /Blog/Delete/5
 
         public ActionResult Delete(int id = 0)
         {
-            ClassRoom classroom = db.ClassRooms.Find(id);
-            if (classroom == null)
+            Blog blog = db.Blogs.Find(id);
+            if (blog == null)
             {
                 return HttpNotFound();
             }
-            return View(classroom);
+            return View(blog);
         }
 
         //
-        // POST: /Default1/Delete/5
+        // POST: /Blog/Delete/5
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            ClassRoom classroom = db.ClassRooms.Find(id);
-            db.ClassRooms.Remove(classroom);
+            Blog blog = db.Blogs.Find(id);
+            db.Blogs.Remove(blog);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -1,4 +1,4 @@
-@import url('//fonts.googleapis.com/css?family=Marcellus');
+﻿@import url('//fonts.googleapis.com/css?family=Marcellus');
 /*!
  * Bootswatch v3.1.1
  * Homepage: http://bootswatch.com
@@ -5700,8 +5700,12 @@ button.close {
   }
 }
 h1:before {
-  content: "\2663";
+  content: "\2666";
   margin-right: 10px;
+}
+h1::after {
+  content: "\2666";
+  margin-left: 10px;
 }
 .page-header {
   border-bottom-width: 5px;
@@ -5816,5 +5820,5 @@ legend {
   visibility: hidden !important;
 }
 .affix {
-    position: fixed;
+  position: fixed;
 }
