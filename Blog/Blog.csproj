@@ -192,7 +192,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Copia de HomeIndex.css" />
+    <Content Include="Content\Shamrock.css" />
     <Content Include="Content\HomeAbout.css" />
     <Content Include="Content\global.css" />
     <Content Include="Content\HomeComment.css" />
@@ -245,9 +245,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\ClassRoom\Delete.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Home\Copia de Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
