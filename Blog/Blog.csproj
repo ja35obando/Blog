@@ -192,6 +192,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
     <Content Include="Content\Copia de HomeIndex.css" />
     <Content Include="Content\HomeAbout.css" />
     <Content Include="Content\global.css" />
